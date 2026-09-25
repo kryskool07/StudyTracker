@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-color: #f7f8fc;
+    color: #1f2937;
+
+    font-family: "Inter", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+
+#headline {
+    color: #4f46e5;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+
+
+button {
+    border: none;
+    border-radius: 8px;
+
+    padding: 9px 14px;
+    margin: 4px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+
+#subjectButton,
+.addTaskButton {
+    background-color: #4f46e5;
+    color: white;
+}
+
+#subjectButton {
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+#subjectButton:hover,
+.addTaskButton:hover {
+    background-color: #4338ca;
+}
+
+
+
+
+.detailsButton {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+
+.detailsButton:hover {
+    background-color: #c7d2fe;
+}
+
+
+
+.editButton {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.editButton:hover {
+    background-color: #e5e7eb;
+}
+
+
+
+
+.deleteButton {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.deleteButton:hover {
+    background-color: #fecaca;
+}
+
+
+
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+    margin: 6px 0;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    background-color: white;
+    color: #1f2937;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+
+
+.subject {
+    width: 600px;
+    max-width: 90%;
+
+    background-color: white;
+
+    padding: 24px;
+    margin: 16px 0;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.subject:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+.subject > span {
+    display: block;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+
+.subject p {
+    margin: 6px 0;
+    color: #4b5563;
+}
+
+
+
+.subjectActions {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin: 16px 0;
+}
+
+.subjectActions .deleteButton {
+    margin-left: auto;
+}
+
+
+.subjectDetails {
+    margin-top: 12px;
+    padding: 14px;
+
+    background-color: #f9fafb;
+
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+
+
+.taskForm {
+    margin-top: 10px;
+    padding: 12px;
+
+    background-color: #f9fafb;
+
+    border-radius: 10px;
+}
+
+
+
+
+.task {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+    margin: 8px 0;
+
+    background-color: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+
+.task input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+
+    cursor: pointer;
+}
+
+
+.task span {
+    flex: 1;
+
+    font-size: 15px;
+    color: #1f2937;
+}
+
+
+.task p {
+    margin: 0;
+
+    font-size: 13px;
+    color: #6b7280;
+}
+
+
+
+.completed {
+    text-decoration: line-through;
+
+    color: #9ca3af;
+
+    opacity: 0.7;
+}
+
+
+
+
+.overdue {
+    color: #dc2626 !important;
+    font-weight: 600;
+}
+
+
+
+.taskDeleteButton {
+    background-color: transparent;
+    color: #dc2626;
+
+    padding: 6px 10px;
+}
+
+.taskDeleteButton:hover {
+    background-color: #fee2e2;
+}
+
+
+
+#subjectList > h2 {
+    width: 600px;
+    max-width: 90%;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    color: #1f2937;
+}
+
+.totalProgressBar {
+    width: 600px;
+    max-width: 90%;
+
+    height: 14px;
+
+    background-color: #e5e7eb;
+
+    border-radius: 999px;
+    overflow: hidden;
+
+    margin-bottom: 25px;
+}
+
+.totalProgressFill {
+    height: 100%;
+
+    background-color: #4f46e5;
+
+    border-radius: 999px;
+
+    transition: width 0.3s ease;
+}
+
+
+
+
+.progressBar {
+    width: 100%;
+    height: 10px;
+
+    background-color: #e5e7eb;
+
+    border-radius: 999px;
+    overflow: hidden;
+
+    margin: 8px 0 15px;
+}
+
+.progressFill {
+    height: 100%;
+
+    background-color: #22c55e;
+
+    border-radius: 999px;
+
+    transition: width 0.3s ease;
+}
